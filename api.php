@@ -20,6 +20,23 @@ ini_set("display_errors", 1);
 error_reporting(E_ALL ^ E_NOTICE);
 date_default_timezone_set("Asia/Kuala_Lumpur");
 
+//-----------------------------------------------
+// Database
+//-----------------------------------------------
+
+$DBServer = 'localhost';
+$DBUser   = 'mydd2014';
+$DBPass   = 'mydd2014rocks';
+$DBName   = 'LifeShield';
+$mysqli   = new mysqli($DBServer, $DBUser, $DBPass, $DBName);
+
+if ($mysqli->connect_error) {
+    trigger_error('Database connection failed: '  . $mysqli->connect_error, E_USER_ERROR);
+}
+
+echo "hello world";
+
+
 
 
 ?>
